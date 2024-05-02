@@ -8,18 +8,19 @@ export default function BooksPage(props) {
   //   const bookId =  useParams()
   //   const params = useSearchParams()
   //   params.name
+
   const [books, setBooks] = useState(null);
 
   function fetchBooks() {
-    fetch("https://bookshop.org/categories/m/popular-books")
-      .then((e) => e.json())
-      .then((books) => {
-        console.log(books);
-        setBooks(books);
-      });
+    // fetch("https://bookshop.org/categories/m/popular-books")
+    //   .then((e) => e.json())
+    //   .then((books) => {
+    //     console.log(books);
+    //     setBooks(books);
+    //   });
     setTimeout(() => {
       setBooks(jsonBooks.data);
-    }, 3000);
+    }, 300);
   }
   useEffect(function () {
     fetchBooks();
